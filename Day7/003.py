@@ -9,10 +9,12 @@ for todo in todos:
 
 # 할일번호를 입력받아 찾아서 출력
     
-input_tno = int(input('할일번호 입력 : '))
+input_tno = int(input('할일 번호 입력 : '))
+찾았니 = False
 for todo in todos:
     if todo['tno']==input_tno:
         print(todo)
-    else:
-        print('할일을 찾을 수 없습니다.')
-        
+        찾았니 = True
+        break
+if 찾았니==False:
+    print('할일을 찾을 수 없습니다.')
