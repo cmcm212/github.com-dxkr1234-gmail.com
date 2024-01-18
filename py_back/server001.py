@@ -11,8 +11,10 @@ app = Flask(__name__)
 
 
 # annotation : 
-@app.config("/hello")
+@app.route("/hello")
 def hello():
     return "hello Flask"
 
 app.run()
+
+# 아오
